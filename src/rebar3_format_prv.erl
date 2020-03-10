@@ -60,7 +60,7 @@ get_files(State) ->
                      case proplists:get_value(files, rebar_state:get(State, format, []), undefined)
                          of
                        undefined ->
-                           ["src/**/*.[he]rl"];
+                           ["src/**/*.[he]rl", "apps/**/*.[he]rl"];
                        Wildcards ->
                            Wildcards
                      end
